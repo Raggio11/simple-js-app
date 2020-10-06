@@ -1,4 +1,6 @@
-let pokemonList = [];
-let arrayofPokemon : [{ Name:Bulbasaur, height: .7, types: ["grass" and "posion"]}]
-let arrayofPokemon : [{Name:Ivysour, height: 1, types: ["grass" and "posion"]}]
-let arrayofPokemon : [{Name:Venusaur, height: 2, types: ["grass" and "posion"]}]
+let pokemonList = {
+  Pokemon1 : { name:"Bulbasaur", height: .7, type: ["grass","posion"]},
+  Pokemon2 : { name:"Ivysour", height: 1, type: ["grass","posion"]},
+  Pokemon3 : { name:"Venusaur", height: 2, type: ["grass","posion"]},
+};
+console.log(pokemonList);
