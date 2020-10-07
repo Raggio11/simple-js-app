@@ -4,13 +4,13 @@ let pokemonList = [
   { name: 'Venusaur', height: 2, type:  ['grass','posion']}
 ];
 for (let i=0; i< pokemonList.length; i++){
-  if (pokemonList[i].name === 'Bulbasaur' ){
+  if (pokemonList[i].height === .7 ){
     document.write(pokemonList[i].name + "(height:.7)")
   }
-  else if (pokemonList[i].name === 'Ivysour' ){
+  else if (pokemonList[i].height === 1 ){
     document.write(pokemonList[i].name + "(height:1)")
   }
-  else if (pokemonList[i].name === 'Venusaur'){
+  else if (pokemonList[i].height === 2){
     document.write(pokemonList[i].name + "(height:2)" + "- Wow, that's big!")
   }
 }
