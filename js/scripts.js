@@ -12,13 +12,16 @@ let pokemonList = [
   { name: 'Venusaur',
   pokedexNumber: 3,
   height: 2,
-  type:  ['grass','posion']}
+  type:  ['grass','posion']
+  }
   ];
-  for (let i = 0; i < pokemonList.length; i++) {
-      document.write("#" + pokemonList[i].pokedexNumber + " " + pokemonList[i].name + " ");
-      if (pokemonList[i].height >= 1.5) {
-          document.write("(height: " + pokemonList[i].height + ") - Wow that's big!</br>")
-      }
-      else if (pokemonList[i].height < 1.5)
-          document.write("(height: " + pokemonList[i].height + ")</br>")
-  };
+
+  pokemonList.forEach(function(user){
+    document.write('#' + user.pokedexNumber + ' ' + user.name)
+;
+if (user.height >= 1.5) {
+  document.write("(height: " + user.height + ") - Wow that's big!</br>")
+}
+else if (user.height < 1.5)
+  document.write("(height: " + user.height + ")</br>")
+});
