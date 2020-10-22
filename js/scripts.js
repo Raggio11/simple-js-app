@@ -74,7 +74,7 @@ function addListItem(pokemon){
     let titleElement = document.createElement('h1');
     titleElement.innerText = title;
 
-    let myImage = document.createElement('img');
+    let myImage = document.createElement("img");
     myImage.src = img;
 
     let contentElement = document.createElement('p');
@@ -83,7 +83,7 @@ function addListItem(pokemon){
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
-    container.appendChild(myImage);
+    modal.appendChild(myImage);
     modal.appendChild(contentElement);
     modalContainer.appendChild(modal);
 
