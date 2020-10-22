@@ -83,9 +83,10 @@ function addListItem(pokemon){
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
+    container.appendChild(myImage);
     modal.appendChild(contentElement);
     modalContainer.appendChild(modal);
-    container.appendChild(myImage);
+
 
     modalContainer.classList.add('is-visible');
   }
@@ -95,7 +96,7 @@ function addListItem(pokemon){
   }
 
   document.querySelector('#show-modal').addEventListener('click', () => {
-    showModal('Modal title', 'This is the modal content!');
+    showModal();
   });
 
   window.addEventListener('keydown', (e) => {
@@ -118,7 +119,8 @@ function addListItem(pokemon){
     addListItem: addListItem,
     showDetails: showDetails,
     loadList: loadList,
-    loadDetails: loadDetails
+    loadDetails: loadDetails,
+    showModal: showModal
   };
 })();
 
