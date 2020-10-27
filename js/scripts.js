@@ -13,11 +13,14 @@ function getAll() {
 }
 
 function addListItem(pokemon){
-  let pokemonList = document.querySelector(".pokemon-list"); /*connects to class pokemon-list on index.html*/
+  let pokemonList = document.querySelector("#pokemon-list"); /*connects to class pokemon-list on index.html*/
   let listItem = document.createElement('li'); /*creats list for every pokemon on the pokemonList*/
   let button = document.createElement("button"); /*creats a button for every item on the list*/
   button.innerText = pokemon.name; /*adds the name of the pokemon to every button that has been created*/
-  button.classList.add("button-class"); /*creats a button class to connect to styles.css to change the style of the page*/
+  button.classList.add('button-list');
+  button.classList.add("button-class");  /*creats a button class to connect to styles.css to change the style of the page*/
+  button.classList.add('.btn');
+  button.classList.add('.btn-btn-primary');
   button.addEventListener("click", function (event) {
     showDetails(pokemon);}) /*creats fucntion that if clicked on will do what the showDetails function demands*/
     listItem.appendChild(button);
@@ -55,10 +58,10 @@ function addListItem(pokemon){
   }
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function () {
-      showModal(item.name, item.imageUrl, item.height);
+      showModal(item);
     });
   }
-  function showModal(title, img, text) {
+  function showModal(item) {
     // Clear all existing modal content
     modalContainer.innerHTML = '';
 
@@ -67,24 +70,27 @@ function addListItem(pokemon){
 
     // Add the new modal content
     let closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('modal-close');
+    closeButtonElement.classList.add('#modal-close');
     closeButtonElement.innerText = 'Close';
     closeButtonElement.addEventListener('click', hideModal);
 
     let titleElement = document.createElement('h1');
-    titleElement.innerText = title;
+    titleElement.innerText = "Name : " + item.name;
 
     let myImage = document.createElement("img");
-    myImage.src = img;
+    myImage.src = item.imageUrl;
 
-    let contentElement = document.createElement('p');
-    contentElement.innerText = text;
+    let weightElement = document.createElement('p');
+    weightElement.innerText = "Weight: " + item.weight;
 
+    let heightElement = document.createElement('p');
+    heightElement.innerText = "Height: " + item.height
 
-    modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(myImage);
-    modal.appendChild(contentElement);
+    modal.appendChild(weightElement);
+    modal.appendChild(heightElement);
+    modal.appendChild(closeButtonElement);
     modalContainer.appendChild(modal);
 
 
