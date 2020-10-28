@@ -20,7 +20,6 @@ function addListItem(pokemon){
   button.classList.add('button-list');
   button.classList.add("button-class");  /*creats a button class to connect to styles.css to change the style of the page*/
   button.classList.add('btn');
-  button.classList.add('btn-btn-primary');
   button.addEventListener("click", function (event) {
     showDetails(pokemon);}) /*creats fucntion that if clicked on will do what the showDetails function demands*/
     listItem.appendChild(button);
@@ -48,6 +47,7 @@ function addListItem(pokemon){
       return response.json();
     }).then(function (details) {
       // Now we add the details to the item
+      item.name = item.name;
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.types = details.types;
