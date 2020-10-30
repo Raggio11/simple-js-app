@@ -1,0 +1,11 @@
+.Page-header{text-align:center;align-items:center;color:#000;justify-content:center;display:flex}
+.navbar{justify-content:center;align-items:center;background:#09f}
+body{font-size:40px;background:linear-gradient(to right,#09f 0,red 100%)}
+ul{text-align:center}
+.button-class{padding:15px;text-align:center;margin:4px 2px;background-color:#6f9;color:#000;border:1mm ridge #fff;margin:5px;padding-left:10%;padding-right:10%;text-transform:capitalize;font-size:20px;border-radius:150px}
+#modal-container{display:none}
+#modal-container.is-visible{position:fixed;padding:20px;box-sizing:border-box;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:999;overflow:auto;display:grid;text-align:center}
+.modal-title{text-align:center}.modal-body{background:#add8e6}
+.modal-footer{background:#add8e6}
+.modal-body img{display:block;margin-left:auto;margin-right:auto}
+.modal-header{background-color:#bf80ff;text-transform:capitalize;text-align:center;display:flex;justify-content:center}
