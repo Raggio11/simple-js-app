@@ -1,15 +1,39 @@
-body{
+.Page-header {
+  text-align: center;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  display: flex;
+}
+* {
+  text-align: center;
+}
+.navbar {
+  justify-content: center;
+  align-items: center;
+  background: #0099ff;
+}
+body {
   font-size: 40px;
+  background: linear-gradient(to right, #0099ff 0%, #ff0000 100%);
 }
-.button-class{
- padding: 15px;
- text-align: center;
- font-size: 16px;
- margin: 4px 2px;
- background-color: #ccff66;
- color: black;
+ul {
+  text-align: center;
 }
-
+.button-class {
+  padding: 15px;
+  text-align: center;
+  margin: 4px 2px;
+  background-color: #66ff99;
+  color: black;
+  border: 1mm ridge white;
+  margin: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-transform: capitalize;
+  font-size: 20px;
+  border-radius: 150px;
+}
 
 #modal-container {
   display: none;
@@ -24,14 +48,33 @@ body{
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-
-  /* to show it above other content */
   z-index: 999;
-
-  /* to allow scrolling if the screen is not high enough*/
   overflow: auto;
-
-  /* this is used to center the modal */
   display: grid;
   text-align: center;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.modal-body {
+  background: #add8e6;
+}
+.modal-footer {
+  background: #add8e6;
+}
+
+.modal-body img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-header {
+  background-color: #bf80ff;
+  text-transform: capitalize;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
